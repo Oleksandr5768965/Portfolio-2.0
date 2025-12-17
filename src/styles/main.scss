@@ -1,1 +1,7 @@
-@use './variables';
+@use "base/basic";
+@use "base/fonts";
+@use "base/variables" as *;
+
+@use "components/buttons";
+
+@use "blocks/header";
