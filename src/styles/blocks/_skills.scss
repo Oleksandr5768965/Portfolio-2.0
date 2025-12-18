@@ -1,0 +1,26 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.skills {
+    &__list {
+        display:flex;
+        flex-direction: column;
+        list-style: none;
+        row-gap: 24px;
+        margin:40px 0 40px 0;
+        li {
+            text-align: center;
+            font-family: "Space Grotesk Bold";
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -1px;
+            p {
+                font-size: 16px;
+                font-family: "Space Grotesk Medium";
+                line-height: 26px;
+                color:$pure-white;
+                margin-top: 5px;
+            }
+        }
+    }
+}

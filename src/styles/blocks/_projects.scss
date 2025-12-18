@@ -1,0 +1,51 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.projects {
+    margin-top: 80px;
+    &__title {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        h2 {
+            font-size:40px;
+            font-family: "Space Grotesk Bold";
+            line-height:40px;
+            letter-spacing:1.14px;
+        }
+        button {
+            @include button;   
+        }
+    }
+    &__wrapper {
+        display:flex;
+        flex-direction: column;
+        row-gap: 40px;
+        margin-bottom: 80px;
+    }
+    &__block {
+        display:flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+    &__stack {
+        display: flex;
+        flex-wrap: wrap;
+        p {
+            margin-right: 18px;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 400;
+            color:$pure-white;
+            text-transform: uppercase;
+        }
+    }
+    &__btn-wrapper {
+        display: flex;
+        justify-content: space-between;
+        button {
+            @include button;
+        }
+    }
+}

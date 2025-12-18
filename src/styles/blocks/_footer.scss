@@ -1,0 +1,75 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.footer {
+    background-color: $gray;
+    padding-top: 60px;
+    &__title {
+        text-align: center;
+        margin-bottom: 50px;
+        h2 {
+            font-size: 40px;
+            line-height: 40px;
+            font-family: "Space Grotesk Bold";
+            margin-bottom: 18px;
+        }
+        p {
+            font-size: 16px;
+            font-family: "Space Grotesk Medium";
+            line-height: 26px;
+            color:$pure-white;
+        }
+    }
+    &__form {
+        form {
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            row-gap: 32px;
+            margin-bottom: 87px;
+            input, textarea {
+                background:none;
+                border:none;
+                border-bottom: solid 2px $white;
+                height:43px;
+                padding-left: 24px;
+                outline:none;
+            }
+            textarea {
+                padding-bottom: 50px;
+            }
+            input::placeholder, 
+            textarea::placeholder {
+                text-transform: uppercase;
+                line-height: 26px;
+                font-weight: 500;
+                font-family: "Space Grotesk Medium";
+            }
+            button {
+                @include button;
+            }
+        }
+        &--btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+    &__social-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding:39px 0 60px 0;
+    }
+    &__social-links-wrapper {
+        width: fit-content;
+    }
+    &__logo {
+        margin: 0 13px 20px 13px;
+        font-family: "Space Grotesk Bold";
+    }
+    &__links-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}

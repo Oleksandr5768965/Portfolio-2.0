@@ -24,6 +24,7 @@
     &__text {
         font-size: 40px;
         margin:40px 0 24px 0;
+        order:2;
     }
     &__img-container {
         display: flex;
@@ -46,6 +47,7 @@
         margin-bottom: 80px;
         button {
             @include button;
+            margin: 24px 0 0 0;
         }
     }
 }
