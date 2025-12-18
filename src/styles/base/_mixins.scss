@@ -1,6 +1,6 @@
 @use "../base/variables" as *;
 
-.basic-btn {
+@mixin button {
     font-family: "Space Grotesk Bold";
     font-size: 16px;
     color: $white;
