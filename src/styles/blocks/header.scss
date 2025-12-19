@@ -1,53 +1,90 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
+@use "../base/breakpoints" as *;
 
 .header {
-    display:flex;
+    display: flex;
     position: relative;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     &__top {
-        position:absolute;
-        top:20px;
+        position: absolute;
+        top: 20px;
         left: 50%;
-        transform:translate(-50%);
+        transform: translate(-50%);
     }
     &__logo {
         margin: 0 13px 20px 13px;
         font-family: "Space Grotesk Bold";
     }
     &__social-links {
-        display:flex;
+        display: flex;
         justify-content: space-between;
     }
     &__text {
         font-size: 40px;
-        margin:40px 0 24px 0;
-        order:2;
+        margin: 40px 0 24px 0;
+        order: 2;
     }
     &__img-container {
         display: flex;
         justify-content: center;
-        width:100%;
+        width: 100%;
     }
     &__img {
-        order:1;
-        width:174px;
+        order: 1;
+        
     }
     &__description {
-        order:3;
-        color:$pure-white;
+        order: 3;
+        color: $pure-white;
     }
     &__marked-text {
         border-bottom: solid 4px $green;
     }
     &__contact-btn-container {
-        order:4;
+        order: 4;
         margin-bottom: 80px;
         button {
             @include button;
             margin: 24px 0 0 0;
         }
+    }
+}
+@include tablet-media {
+    .header {
+        text-align: left;
+        &__top {
+            display:flex;
+            position: unset;
+            width: 100%;
+            justify-content: space-between;
+            transform: translate(0%);
+            padding-top:29px;
+        }
+        &__logo {
+            margin:0;
+        }
+        &__social-links {
+            width:192px;
+        }
+        &__img-container {
+            position: relative;
+            img {
+                position:absolute;
+                top:-60px;
+                right:-30px;
+                z-index: -4;
+            }
+        }
+        &__hero-container {
+            max-width: 490px;
+        }
+        &__text {
+            font-size: 72px;
+            margin:90px 0 60px 0;
+        }
+
     }
 }

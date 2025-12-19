@@ -1,5 +1,6 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
+@use "../base/breakpoints" as *;
 
 .skills {
     &__list {
@@ -8,6 +9,7 @@
         list-style: none;
         row-gap: 24px;
         margin:40px 0 40px 0;
+        border-bottom: solid 2px $pure-white;
         li {
             text-align: center;
             font-family: "Space Grotesk Bold";
@@ -20,6 +22,29 @@
                 line-height: 26px;
                 color:$pure-white;
                 margin-top: 5px;
+            }
+        }
+    }
+}
+
+@include tablet-media {
+    .skills {
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding:52px 0 100px 0;
+            border-bottom: none;
+            margin:0;
+            row-gap: 52px;
+            li {
+                flex:0 0 50%;
+                text-align: left;
+                font-size: 48px;
+                line-height: 56px;
+                p {
+                    font-size: 18px;
+                    margin-top: 14px;
+                }
             }
         }
     }

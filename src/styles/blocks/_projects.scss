@@ -1,5 +1,6 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
+@use "../base/breakpoints" as *; 
 
 .projects {
     margin-top: 80px;
@@ -7,7 +8,6 @@
         display:flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 40px;
         h2 {
             font-size:40px;
             font-family: "Space Grotesk Bold";
@@ -22,7 +22,7 @@
         display:flex;
         flex-direction: column;
         row-gap: 40px;
-        margin-bottom: 80px;
+        margin-top: 40px;
     }
     &__block {
         display:flex;
@@ -46,6 +46,30 @@
         justify-content: space-between;
         button {
             @include button;
+        }
+    }
+}
+@include tablet-media {
+    .projects {
+        margin:0 0 104px 0;
+        &__title {
+            align-items: center;
+            h2 {
+                font-size: 72px;
+                line-height: 72px;
+            }
+            button { height:36px }
+        }
+        &__wrapper {
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 60px;
+            column-gap: 24px;
+            justify-content: center;
+        }
+        &__block {
+            max-width:342px;
+            flex:1, 1, 50%;
         }
     }
 }

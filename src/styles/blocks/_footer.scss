@@ -1,5 +1,6 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
+@use "../base/breakpoints" as *;
 
 .footer {
     background-color: $gray;
@@ -71,5 +72,41 @@
     &__links-wrapper {
         display: flex;
         justify-content: space-between;
+    }
+}
+@include tablet-media {
+    .footer {
+        padding:0;
+        &__wrapper {
+            padding:60px 131px 92px 131px;
+            border-bottom: solid 2px $pure-white;
+        }
+        &__form {
+            form {
+                margin-bottom: 0;
+            }
+        }
+        &__social-links {
+            display: flex;
+            flex-direction: row;
+            position: unset;
+            width: 100%;
+            justify-content: space-between;
+            transform: translate(0%);
+            padding:30px 0 40px 0;
+        }
+        &__logo {
+            margin: 0;
+            font-size: 32px;
+        }
+        &__social-links-wrapper {
+            width: 100%;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__links-wrapper {
+            width:192px;
+        }
     }
 }
