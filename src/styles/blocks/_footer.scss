@@ -35,6 +35,11 @@
                 height:43px;
                 padding-left: 24px;
                 outline:none;
+                font-size: 16px;
+                color:$white;
+                text-transform: uppercase;
+                font-weight: 500;
+                font-family: "Space Grotesk Medium";
             }
             textarea {
                 padding-bottom: 50px;
@@ -107,6 +112,39 @@
         }
         &__links-wrapper {
             width:192px;
+        }
+    }
+}
+@include desktop-media {
+    .footer {
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            padding:0;
+            justify-content: space-between;
+            column-gap: 220px;
+            padding:84px 0 92px 0;
+        }
+        &__title {
+            text-align: left;
+            margin:0;
+            h2 {
+                font-size:88px;
+                line-height: 88px;
+                margin-bottom: 39px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+        &__form {
+            width:80%;
+            &--btn {
+                width: 100%;
+            }
+        }
+        &__social-links {
+            padding: 47px 0 92px 0;
         }
     }
 }

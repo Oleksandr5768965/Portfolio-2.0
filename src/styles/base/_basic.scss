@@ -9,9 +9,11 @@ ul[role="list"] {
     list-style: none;
     padding-inline: 0;
 }
+
 h1,h2,h3,h4,h5 {
     font-size: inherit;
     font-weight: inherit;
+   
 }
 img {
     display:block;
@@ -40,5 +42,10 @@ body {
 @include tablet-media {
     .container {
         padding:0 30px 0 30px;
+    }
+}
+@include desktop-media {
+    .container {
+        padding:0 165px 0 165px;
     }
 }

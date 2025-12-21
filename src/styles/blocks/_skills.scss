@@ -49,3 +49,13 @@
         }
     }
 }
+@include desktop-media {
+    .skills {
+        &__list {
+            padding:72px 0 140px 0;
+            li {
+                flex: 0 0 33%;
+            }
+        }
+    }
+}

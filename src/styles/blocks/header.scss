@@ -88,3 +88,42 @@
 
     }
 }
+@include desktop-media {
+    .header {
+        &__top {
+            padding:39px 0 0 0;
+        }
+        &__logo {
+            font-size: 32px;
+        }
+        &__social-links {
+            svg:hover {
+                transform: scale(1.4);
+                transition: all 0.5s ease-in-out;
+                path {
+                    fill: $green;
+                    transition: all 0.5s ease-in-out;
+                }
+
+            }
+        }
+        &__img-container {
+            img {
+                top: -80px;
+                right: 0px;
+                z-index: -4;
+            }
+        }
+        &__text {
+            font-size: 88px;
+            margin:0 0 43px 0;
+        }
+        &__hero-container {
+            max-width:796px;
+            margin: 127px 0 219px 0;
+        }
+        &__contact-btn-container {
+            margin:0;
+        }
+    }
+}
