@@ -3,6 +3,7 @@
 @use "base/variables" as *;
 @use "base/mixins" as *;
 @use "base/breakpoints" as *;
+@use "base/animation" as *;
 
 @use "components/buttons";
 
@@ -10,3 +11,5 @@
 @use "blocks/skills";
 @use "blocks/projects";
 @use "blocks/footer";
+
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');

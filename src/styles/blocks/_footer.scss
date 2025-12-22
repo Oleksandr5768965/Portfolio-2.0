@@ -72,7 +72,7 @@
     }
     &__logo {
         margin: 0 13px 20px 13px;
-        font-family: "Space Grotesk Bold";
+        font-family: "BBH Bartle", sans-serif;
     }
     &__links-wrapper {
         display: flex;
@@ -102,7 +102,7 @@
         }
         &__logo {
             margin: 0;
-            font-size: 32px;
+            font-size: 28px;
         }
         &__social-links-wrapper {
             width: 100%;
@@ -145,6 +145,16 @@
         }
         &__social-links {
             padding: 47px 0 92px 0;
+        }
+        &__links-wrapper {
+            svg:hover {
+                transform: scale(1.4);
+                transition: all 0.5s ease-in-out;
+                path {
+                    fill: $green;
+                    transition: all 0.5s ease-in-out;
+                }
+            }
         }
     }
 }

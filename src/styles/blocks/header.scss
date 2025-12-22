@@ -16,7 +16,9 @@
     }
     &__logo {
         margin: 0 13px 20px 13px;
-        font-family: "Space Grotesk Bold";
+        font-family: "BBH Bartle", sans-serif;
+        -webkit-animation: focus-in-expand 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: focus-in-expand 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
     &__social-links {
         display: flex;
@@ -26,6 +28,8 @@
         font-size: 40px;
         margin: 40px 0 24px 0;
         order: 2;
+        -webkit-animation: focus-in-expand 3.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: focus-in-expand 3.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
     &__img-container {
         display: flex;
@@ -34,7 +38,7 @@
     }
     &__img {
         order: 1;
-        
+        height:580px;
     }
     &__description {
         order: 3;
@@ -50,6 +54,12 @@
             @include button;
             margin: 24px 0 0 0;
         }
+    }
+    &__pattern-rings {
+        position: absolute;
+        width:fit-content;
+        right:500px;
+        top:240px;
     }
 }
 @include tablet-media {
@@ -85,7 +95,9 @@
             font-size: 72px;
             margin:90px 0 60px 0;
         }
-
+        &__pattern-rings {
+            top: 90px;
+        }
     }
 }
 @include desktop-media {
@@ -124,6 +136,9 @@
         }
         &__contact-btn-container {
             margin:0;
+        }
+        &__pattern-rings {
+            right:980px;
         }
     }
 }
