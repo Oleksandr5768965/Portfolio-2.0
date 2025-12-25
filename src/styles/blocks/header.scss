@@ -25,11 +25,16 @@
         justify-content: space-between;
     }
     &__text {
+        position: relative;
         font-size: 40px;
         margin: 40px 0 24px 0;
         order: 2;
-        -webkit-animation: focus-in-expand 3.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        animation: focus-in-expand 3.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        // -webkit-animation: focus-in-expand 3.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        // animation: focus-in-expand 3.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        // -webkit-animation: tracking-in-contract 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        // animation: tracking-in-contract 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     }
     &__img-container {
         display: flex;
@@ -37,12 +42,16 @@
         width: 100%;
     }
     &__img {
+        display: block;
+        filter: drop-shadow(0 7px 40px rgba(0, 0, 0, 0.8));
         order: 1;
         height:580px;
+        margin-top: 80px;
     }
     &__description {
         order: 3;
         color: $pure-white;
+        margin-bottom: 34px;
     }
     &__marked-text {
         border-bottom: solid 4px $green;
@@ -50,9 +59,9 @@
     &__contact-btn-container {
         order: 4;
         margin-bottom: 80px;
-        button {
+        a {
+            margin-top: 34px;
             @include button;
-            margin: 24px 0 0 0;
         }
     }
     &__pattern-rings {

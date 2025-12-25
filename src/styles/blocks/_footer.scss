@@ -28,24 +28,29 @@
             justify-content: flex-start;
             row-gap: 32px;
             margin-bottom: 87px;
+            input[type="email"]:invalid {
+                //short email validation
+                color: red;
+
+                -webkit-animation: shake-horizontal 0.9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                animation: shake-horizontal 0.9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            }
             input, textarea {
                 background:none;
                 border:none;
-                border-bottom: solid 2px $white;
                 height:43px;
                 padding-left: 24px;
                 outline:none;
                 font-size: 16px;
                 color:$white;
-                text-transform: uppercase;
                 font-weight: 500;
                 font-family: "Space Grotesk Medium";
+                border-bottom: solid 2px $white;
             }
             textarea {
                 padding-bottom: 50px;
             }
-            input::placeholder, 
-            textarea::placeholder {
+            input::placeholder, textarea::placeholder {
                 text-transform: uppercase;
                 line-height: 26px;
                 font-weight: 500;
@@ -53,6 +58,10 @@
             }
             button {
                 @include button;
+            }
+            .form-error-state-animation {
+                -webkit-animation: shake-horizontal 0.9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                animation: shake-horizontal 0.9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
             }
         }
         &--btn {

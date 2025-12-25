@@ -22,8 +22,6 @@
                 line-height: 26px;
                 color:$pure-white;
                 margin-top: 5px;
-                // -webkit-animation: tracking-in-contract 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-                // animation: tracking-in-contract 1.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
             }
             span {
                 -webkit-animation: tracking-in-expand-fwd 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -43,10 +41,36 @@
             width: 50px;
         }
     }
+    &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        h2 {
+            font-size: 40px;
+            font-family: "Space Grotesk Bold";
+            line-height: 40px;
+            letter-spacing: 1.14px;
+        }
+        a {
+            @include button;
+        }
+    }
 }
 
 @include tablet-media {
     .skills {
+        &__title {
+            align-items: center;
+            h2 {
+                font-size: 72px;
+                line-height: 72px;
+            }
+            button {
+                height: 36px
+            }
+        }
         &__list {
             flex-direction: row;
             flex-wrap: wrap;
@@ -74,6 +98,11 @@
 }
 @include desktop-media {
     .skills {
+        &__title {
+            h2 {
+                font-size: 88px;
+            }
+        }
         &__list {
             padding:72px 0 140px 0;
             li {
